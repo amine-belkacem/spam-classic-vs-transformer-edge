@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spamedge"
+version = "0.1.0"
+description = "When is TF-IDF + logistic regression enough? A measured comparison with DistilBERT, from a PC down to a Raspberry Pi 5."
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Mohamed Amine Belkacem" }]
+dependencies = ["numpy", "pandas", "scikit-learn", "torch", "transformers", "onnx", "onnxruntime", "psutil", "matplotlib"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

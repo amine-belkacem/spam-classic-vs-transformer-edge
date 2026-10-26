@@ -1,0 +1,6 @@
+# Dependencies for the unit tests. They run on tiny hand-written inputs, never on the real datasets.
+# torch / transformers / onnxruntime join this list when the tests that need them arrive.
+numpy
+pandas
+pytest
+pyflakes
