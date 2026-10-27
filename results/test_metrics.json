@@ -1,0 +1,100 @@
+{
+  "n_test": 774,
+  "n_spam": 96,
+  "threshold": 0.5,
+  "bootstrap": {
+    "resamples": 1000,
+    "seed": 0,
+    "stratified": true,
+    "level": 0.95
+  },
+  "distilbert_seed": 0,
+  "models": {
+    "classic": {
+      "precision": 0.9474,
+      "recall": 0.9375,
+      "f1": 0.9424,
+      "pr_auc": 0.9837,
+      "tp": 90,
+      "fp": 5,
+      "fn": 6,
+      "tn": 673,
+      "ci": {
+        "precision": [
+          0.899,
+          0.9888
+        ],
+        "recall": [
+          0.8854,
+          0.9792
+        ],
+        "f1": [
+          0.9062,
+          0.9736
+        ],
+        "pr_auc": [
+          0.9638,
+          0.9973
+        ]
+      }
+    },
+    "distilbert": {
+      "precision": 0.9394,
+      "recall": 0.9688,
+      "f1": 0.9538,
+      "pr_auc": 0.9935,
+      "tp": 93,
+      "fp": 6,
+      "fn": 3,
+      "tn": 672,
+      "ci": {
+        "precision": [
+          0.8889,
+          0.9792
+        ],
+        "recall": [
+          0.9271,
+          1.0
+        ],
+        "f1": [
+          0.9215,
+          0.9794
+        ],
+        "pr_auc": [
+          0.9853,
+          0.9991
+        ]
+      }
+    }
+  },
+  "difference_distilbert_minus_classic": {
+    "precision": {
+      "point": -0.008,
+      "ci": [
+        -0.0621,
+        0.0412
+      ]
+    },
+    "recall": {
+      "point": 0.0313,
+      "ci": [
+        0.0,
+        0.0628
+      ]
+    },
+    "f1": {
+      "point": 0.0114,
+      "ci": [
+        -0.0193,
+        0.0464
+      ]
+    },
+    "pr_auc": {
+      "point": 0.0098,
+      "ci": [
+        -0.0024,
+        0.0257
+      ]
+    }
+  }
+}

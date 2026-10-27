@@ -1,0 +1,24 @@
+{
+  "source_rows": 5574,
+  "source_spam": 747,
+  "after_dedup_rows": 5159,
+  "after_dedup_spam": 642,
+  "split_seed": 42,
+  "parts": {
+    "train": {
+      "rows": 3611,
+      "spam": 450,
+      "spam_rate": 0.1246
+    },
+    "val": {
+      "rows": 774,
+      "spam": 96,
+      "spam_rate": 0.124
+    },
+    "test": {
+      "rows": 774,
+      "spam": 96,
+      "spam_rate": 0.124
+    }
+  }
+}

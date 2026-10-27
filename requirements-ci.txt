@@ -1,6 +1,11 @@
-# Dependencies for the unit tests. They run on tiny hand-written inputs, never on the real datasets.
-# torch / transformers / onnxruntime join this list when the tests that need them arrive.
+# Dependencies for the unit tests. They run on tiny hand-written inputs and a tiny
+# locally built DistilBERT, never on the real datasets or the pretrained weights.
+# torch comes from the CPU-only index: the CI has no GPU, and the CUDA build is ~2 GB.
+--extra-index-url https://download.pytorch.org/whl/cpu
 numpy
 pandas
+scikit-learn
+torch
+transformers
 pytest
 pyflakes

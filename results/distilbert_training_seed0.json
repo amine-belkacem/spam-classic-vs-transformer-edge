@@ -1,0 +1,59 @@
+{
+  "seed": 0,
+  "model": "distilbert-base-uncased",
+  "revision": "12040accade4e8a0f71eabdb258fecc2e7e948be",
+  "epochs": 3,
+  "batch_size": 16,
+  "learning_rate": 5e-05,
+  "weight_decay": 0.01,
+  "warmup_fraction": 0.1,
+  "max_length": 128,
+  "best_epoch": 3,
+  "history": [
+    {
+      "epoch": 1,
+      "train_seconds": 963.9,
+      "mean_train_loss": 0.12744,
+      "precision": 0.9479,
+      "recall": 0.9479,
+      "f1": 0.9479,
+      "pr_auc": 0.9911,
+      "tp": 91,
+      "fp": 5,
+      "fn": 5,
+      "tn": 673
+    },
+    {
+      "epoch": 2,
+      "train_seconds": 917.7,
+      "mean_train_loss": 0.02869,
+      "precision": 1.0,
+      "recall": 0.9479,
+      "f1": 0.9733,
+      "pr_auc": 0.9955,
+      "tp": 91,
+      "fp": 0,
+      "fn": 5,
+      "tn": 678
+    },
+    {
+      "epoch": 3,
+      "train_seconds": 1215.1,
+      "mean_train_loss": 0.01001,
+      "precision": 0.9892,
+      "recall": 0.9583,
+      "f1": 0.9735,
+      "pr_auc": 0.996,
+      "tp": 92,
+      "fp": 1,
+      "fn": 4,
+      "tn": 677
+    }
+  ],
+  "machine": {
+    "cpu": "AMD64 Family 23 Model 160 Stepping 0, AuthenticAMD",
+    "torch_threads": 4,
+    "torch": "2.14.1+cpu",
+    "python": "3.12.10"
+  }
+}

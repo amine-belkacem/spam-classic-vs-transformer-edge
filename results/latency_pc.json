@@ -1,0 +1,148 @@
+{
+  "machine": {
+    "cpu": "AMD Ryzen 3 7320U with Radeon Graphics",
+    "logical_cpus": 8,
+    "machine": "AMD64",
+    "os": "Windows 11",
+    "python": "3.12.10",
+    "torch_threads": 4
+  },
+  "date_utc": "2026-10-27T19:14:09+00:00",
+  "protocol": {
+    "batch_size": 1,
+    "warmup_calls": 50,
+    "timed_calls_per_run": 1000,
+    "repeats": 3,
+    "texts": "test split, shuffled with seed 0, cycled",
+    "max_idle_cpu_percent": 15.0
+  },
+  "cpu_load_before_each_run_percent": [
+    10.9,
+    11.2,
+    7.7
+  ],
+  "busy_machine": false,
+  "versions": {
+    "torch": "2.14.1+cpu"
+  },
+  "models": {
+    "classic": {
+      "size_bytes": 1957412,
+      "pooled": {
+        "n": 3000,
+        "mean_ms": 1.6432,
+        "std_ms": 0.4043,
+        "p50_ms": 1.5189,
+        "p95_ms": 2.4423,
+        "p99_ms": 2.9222,
+        "min_ms": 1.187,
+        "max_ms": 6.9555
+      },
+      "across_runs": {
+        "p50_ms": {
+          "mean": 1.522,
+          "std": 0.0578
+        },
+        "p95_ms": {
+          "mean": 2.4498,
+          "std": 0.0594
+        },
+        "p99_ms": {
+          "mean": 3.0393,
+          "std": 0.4597
+        }
+      },
+      "runs": [
+        {
+          "n": 1000,
+          "mean_ms": 1.5715,
+          "std_ms": 0.3523,
+          "p50_ms": 1.4571,
+          "p95_ms": 2.3852,
+          "p99_ms": 2.7751,
+          "min_ms": 1.187,
+          "max_ms": 3.0077
+        },
+        {
+          "n": 1000,
+          "mean_ms": 1.6734,
+          "std_ms": 0.3511,
+          "p50_ms": 1.5678,
+          "p95_ms": 2.4621,
+          "p99_ms": 2.7728,
+          "min_ms": 1.2168,
+          "max_ms": 3.1735
+        },
+        {
+          "n": 1000,
+          "mean_ms": 1.6848,
+          "std_ms": 0.4852,
+          "p50_ms": 1.541,
+          "p95_ms": 2.5021,
+          "p99_ms": 3.5701,
+          "min_ms": 1.2106,
+          "max_ms": 6.9555
+        }
+      ]
+    },
+    "distilbert_pytorch_fp32": {
+      "size_bytes": 268545244,
+      "pooled": {
+        "n": 3000,
+        "mean_ms": 43.5709,
+        "std_ms": 14.9151,
+        "p50_ms": 39.0528,
+        "p95_ms": 69.6034,
+        "p99_ms": 86.4556,
+        "min_ms": 23.2416,
+        "max_ms": 206.8265
+      },
+      "across_runs": {
+        "p50_ms": {
+          "mean": 39.0371,
+          "std": 0.1152
+        },
+        "p95_ms": {
+          "mean": 69.5628,
+          "std": 0.6941
+        },
+        "p99_ms": {
+          "mean": 86.5232,
+          "std": 0.6744
+        }
+      },
+      "runs": [
+        {
+          "n": 1000,
+          "mean_ms": 43.5701,
+          "std_ms": 15.2702,
+          "p50_ms": 38.9048,
+          "p95_ms": 70.335,
+          "p99_ms": 85.8759,
+          "min_ms": 23.8736,
+          "max_ms": 206.8265
+        },
+        {
+          "n": 1000,
+          "mean_ms": 43.6875,
+          "std_ms": 14.6403,
+          "p50_ms": 39.115,
+          "p95_ms": 69.3627,
+          "p99_ms": 86.4718,
+          "min_ms": 23.2416,
+          "max_ms": 141.7088
+        },
+        {
+          "n": 1000,
+          "mean_ms": 43.455,
+          "std_ms": 14.8418,
+          "p50_ms": 39.0915,
+          "p95_ms": 68.9908,
+          "p99_ms": 87.2218,
+          "min_ms": 24.4283,
+          "max_ms": 138.0334
+        }
+      ]
+    }
+  }
+}

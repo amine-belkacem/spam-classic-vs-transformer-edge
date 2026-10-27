@@ -68,7 +68,7 @@ def check_counts(df: pd.DataFrame, expected_rows: int, expected_spam: int, name:
         )
 
 
-def load_sms(path: Path) -> pd.DataFrame:
+def load_sms(path: str | Path) -> pd.DataFrame:
     with open(path, encoding="utf-8") as f:
         df = parse_sms_lines(f)
     check_counts(df, SMS_EXPECTED_ROWS, SMS_EXPECTED_SPAM, "SMS Spam Collection")
@@ -96,7 +96,8 @@ def read_youtube_csv(csv_path: Path) -> pd.DataFrame:
     })
 
 
-def load_youtube(csv_dir: Path) -> pd.DataFrame:
+def load_youtube(csv_dir: str | Path) -> pd.DataFrame:
+    csv_dir = Path(csv_dir)
     files = sorted(csv_dir.glob("Youtube*.csv"))
     if not files:
         raise FileNotFoundError(f"no Youtube*.csv file in {csv_dir}")
